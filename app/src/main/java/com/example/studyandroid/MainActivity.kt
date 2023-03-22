@@ -1,5 +1,6 @@
 package com.example.studyandroid
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
@@ -17,8 +18,10 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(binding.root)
         button.setOnClickListener {
-            val message = editText.text.toString()
-            Toast.makeText(this,message,Toast.LENGTH_SHORT).show()
+//            val message = editText.text.toString()
+//            Toast.makeText(this,message,Toast.LENGTH_SHORT).show()
+            var intent = Intent(this,ListViewActivity::class.java)
+            startActivity(intent)
         }
 
     }
